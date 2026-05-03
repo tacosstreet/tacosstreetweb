@@ -7,7 +7,7 @@ import SocialSection from '../components/SocialSection';
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
 import { SiUbereats, SiGlovo } from 'react-icons/si';
 
-const igPhotos = ['ig_12', 'ig_07', 'ig_08', 'ig_09', 'ig_10', 'ig_11', 'ig_14', 'ig_15', 'ig_17', 'ig_18', 'ig_19', 'ig_20'];
+const igPhotos = ['ig_12', 'ig_07', 'ig_08', 'ig_09', 'ig_10', 'ig_11', 'ig_14', 'ig_15'];
 
 export default function Home() {
   return (
@@ -64,6 +64,8 @@ export default function Home() {
       {/* Menu */}
       <MenuSection />
 
+      <TacoBuilder />
+
       {/* Info: Glosario & Alergenos */}
       <InfoSection />
 
@@ -80,13 +82,11 @@ export default function Home() {
         </div>
       </section>
 
-      <TacoBuilder />
-
       {/* Map overview */}
       <section className="map-overview-section" id="mapa">
         <div style={{ marginBottom: '3rem' }}>
           <p className="sec-ey">Dónde estamos</p>
-          <h2 className="sec-title" style={{ marginBottom: 0 }}>Encuéntranos <span style={{ WebkitTextStroke: '1.5px #fff', color: 'transparent' }}>en Zaragoza</span></h2>
+          <h2 className="sec-title" style={{ marginBottom: 0 }}>Encuéntranos <span>en Zaragoza</span></h2>
         </div>
         <div className="loc-overview">
           <div className="loc-overview-head">
@@ -115,15 +115,15 @@ export default function Home() {
       {/* Gallery strip */}
       <div className="gallery-strip">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/img/nuevas/485898107_17855857317399707_981223533762627984_n.jpg" alt="Menu completo Tacos Street" loading="lazy" />
+        <img src="/img/nuevas/sorteo300.jpg" alt="Sorteo 300 Tacos Street" loading="lazy" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/img/nuevas/lafusiondelacalle.jpg" alt="La Fusión de la Calle - Tacos Street" loading="lazy" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/img/web/taco-django.jpg" alt="Taco Django" loading="lazy" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/img/web/interior-mural.jpg" alt="Interior Tacos Street" loading="lazy" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/img/web/gamechangers.jpg" alt="Game Changers" loading="lazy" />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/img/web/mural.jpg" alt="Mural street art Tacos Street" loading="lazy" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="img/Emocionales/Emocional 12.jpg" alt="Taco Street con packaging" loading="lazy" />
       </div>
@@ -160,8 +160,17 @@ export default function Home() {
       {/* Community */}
       <section className="community-section" id="comunidad">
         <p className="sec-ey">Mas que un restaurante</p>
-        <h2 className="sec-title">La <span style={{ WebkitTextStroke: '1.5px #fff', color: 'transparent' }}>comunidad</span></h2>
+        <h2 className="sec-title">La comunidad</h2>
         <div className="community-grid">
+          <div className="comm-card">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/img/nuevas/lafusiondelacalle.jpg" alt="La Fusion de la Calle Makdurum x Tacos Street" loading="lazy" />
+            <div className="comm-overlay">
+              <span className="comm-tag comm-tag-y">Sorteo &middot; 300&euro;</span>
+              <div className="comm-title">Makdurum x Tacos Street</div>
+              <p className="comm-desc">300&euro; en metalico por la cara. @makdurum y @tacosstreet.es juntos. Dos sabores, una sola oportunidad de ganar.</p>
+            </div>
+          </div>
           <div className="comm-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/img/web/bikelife.jpg" alt="Evento bikelife con Tacos Street" loading="lazy" />
@@ -200,15 +209,6 @@ export default function Home() {
           </div>
           <div className="comm-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/nuevas/520476954_17871590457399707_8545419620307517054_n.jpg" alt="Grupo torneo futbol con banner" loading="lazy" />
-            <div className="comm-overlay">
-              <span className="comm-tag comm-tag-w">Evento</span>
-              <div className="comm-title">La calle es nuestra cancha</div>
-              <p className="comm-desc">Torneo 1v1 en Parque Bruil. 275&euro; en premios. Tacos y futbol, siempre juntos.</p>
-            </div>
-          </div>
-          <div className="comm-card">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/img/nuevas/524931565_17872907319399707_7374945463904138356_n.jpg" alt="Game Changer con caja" loading="lazy" />
             <div className="comm-overlay">
               <span className="comm-tag comm-tag-y">Game Changer</span>
@@ -224,7 +224,7 @@ export default function Home() {
         <div className="press-header">
           <div>
             <p className="sec-ey">En los medios</p>
-            <h2 className="sec-title" style={{ marginBottom: 0 }}>Hablan <span style={{ WebkitTextStroke: '1.5px #fff', color: 'transparent' }}>de nosotros</span></h2>
+            <h2 className="sec-title" style={{ marginBottom: 0 }}>Hablan de nosotros</h2>
           </div>
         </div>
         <div className="press-grid">
@@ -265,7 +265,7 @@ export default function Home() {
       {/* History */}
       <section className="history-section" id="historia">
         <p className="sec-ey">Como llegamos hasta aqui</p>
-        <h2 className="sec-title">De Las Fuentes<br /><span style={{ WebkitTextStroke: '1.5px #fff', color: 'transparent' }}>al Actur</span></h2>
+        <h2 className="sec-title">De Las Fuentes<br /><span>al Actur</span></h2>
         <div className="history-grid">
           <div className="history-intro">
             <p>En menos de un ano, Tacos Street paso de ser una apuesta arriesgada en un barrio de Zaragoza a convertirse en el referente del taco frances en Espana.</p>
@@ -321,7 +321,7 @@ export default function Home() {
       {/* Individual location cards */}
       <section className="locations-section" id="locales">
         <p className="sec-ey">Donde encontrarnos</p>
-        <h2 className="sec-title">Dos locales<br /><span style={{ WebkitTextStroke: '1.5px #fff', color: 'transparent' }}>en Zaragoza</span></h2>
+        <h2 className="sec-title">Dos locales<br /><span>en Zaragoza</span></h2>
         <div className="loc-grid">
           <div className="loc-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -11,14 +11,14 @@ const tabs = [
   { id: "menus", label: "Menus" },
 ];
 
-const anton = { fontFamily: "var(--font-anton)" };
+const thunder = { fontFamily: "var(--font-thunder)" };
 
 function MC({ name, price, desc, tags }: { name: string; price: string; desc: string; tags?: { label: string; cls: string }[] }) {
   return (
     <div className="mc">
       <div className="mc-top">
-        <div className="mc-name" style={anton}>{name}</div>
-        <div className="mc-price" style={anton}>{price}</div>
+        <div className="mc-name" style={thunder}>{name}</div>
+        <div className="mc-price" style={thunder}>{price}</div>
       </div>
       <p className="mc-desc">{desc}</p>
       {tags && tags.length > 0 && (
@@ -43,7 +43,7 @@ export default function MenuSection() {
       <div className="menu-header">
         <div>
           <p className="sec-ey">Lo que hacemos</p>
-          <h2 className="sec-title" style={{ ...anton, marginBottom: 0 }}>La Carta</h2>
+          <h2 className="sec-title" style={{ ...thunder, marginBottom: 0 }}>La Carta</h2>
         </div>
         <div className="menu-tabs">
           {tabs.map((t) => (

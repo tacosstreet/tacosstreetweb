@@ -296,8 +296,7 @@ export default function InfoSection() {
     <section className="info-section" id="info">
       <p className="sec-ey">Todo lo que necesitas saber</p>
       <h2 className="sec-title">
-        Conoce{' '}
-        <span style={{ WebkitTextStroke: '1.5px #fff', color: 'transparent' }}>nuestros productos</span>
+        Conoce nuestros productos
       </h2>
 
       {/* Big tab buttons */}

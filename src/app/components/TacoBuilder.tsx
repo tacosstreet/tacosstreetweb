@@ -118,7 +118,7 @@ export default function TacoBuilder() {
   return (
     <section className="tb-section" id="builder">
       <p className="sec-ey">Personaliza al máximo</p>
-      <h2 className="sec-title">Crea <span style={{ WebkitTextStroke: '1.5px #fff', color: 'transparent' }}>tu taco</span></h2>
+      <h2 className="sec-title">Crea tu taco</h2>
 
       {/* Progress */}
       <div className="tb-progress">

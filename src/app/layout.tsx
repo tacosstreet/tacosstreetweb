@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Anton, Space_Grotesk } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--font-anton" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space" });
 
 const SITE_URL = "https://tacosstreet.es";
@@ -146,7 +145,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${anton.variable} ${spaceGrotesk.variable}`} style={{ fontFamily: "var(--font-space)" }}>
+      <body className={spaceGrotesk.variable} style={{ fontFamily: "var(--font-space)" }}>
         {children}
       </body>
     </html>

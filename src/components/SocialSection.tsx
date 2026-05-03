@@ -42,8 +42,8 @@ export default function SocialSection() {
   return (
     <section className="social-section">
       <p className="sec-ey">Siguenos</p>
-      <h2 className="sec-title" style={{ fontFamily: "var(--font-anton)" }}>
-        Nuestras <span style={{ WebkitTextStroke: "1.5px #fff", color: "transparent" }}>redes</span>
+      <h2 className="sec-title">
+        Nuestras redes
       </h2>
       <div className="social-grid">
         {socials.map((s) => (
@@ -51,7 +51,7 @@ export default function SocialSection() {
             <div className="social-icon-wrap" style={{ background: s.gradient }}>
               <s.icon size={32} color="#fff" />
             </div>
-            <span className="social-name" style={{ fontFamily: "var(--font-anton)" }}>{s.name}</span>
+            <span className="social-name">{s.name}</span>
             <span className="social-handle">{s.handle}</span>
             <span className="social-follow">{s.cta} &rarr;</span>
           </a>

@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const tabs = [
   { id: 'signature', label: 'Tacos Signature' },
@@ -78,15 +78,29 @@ const menuData: Record<string, MenuItem[]> = {
 
 export default function MenuSection() {
   const [active, setActive] = useState('signature');
+  const [cartaOpen, setCartaOpen] = useState(false);
+
+  useEffect(() => {
+    if (!cartaOpen) return;
+    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') setCartaOpen(false); };
+    document.addEventListener('keydown', handler);
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', handler); document.body.style.overflow = ''; };
+  }, [cartaOpen]);
 
   return (
     <section className="menu-section" id="carta">
-      <div className="carta-images">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/img/carta1.jpg" alt="Carta Tacos Street - Crea tu taco: carnes, salsas, extras, gratinados" loading="lazy" />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/img/cartra2.jpg" alt="Carta Tacos Street - Entrantes, bebidas, postres, menu estudiante" loading="lazy" />
-      </div>
+      {cartaOpen && (
+        <div className="carta-modal-overlay" onClick={() => setCartaOpen(false)}>
+          <div className="carta-modal" onClick={e => e.stopPropagation()}>
+            <button className="carta-modal-close" onClick={() => setCartaOpen(false)} aria-label="Cerrar">✕</button>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/img/carta1.jpg" alt="Carta Tacos Street - Crea tu taco" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/img/cartra2.jpg" alt="Carta Tacos Street - Entrantes, bebidas, postres" />
+          </div>
+        </div>
+      )}
       <div className="menu-header">
         <div>
           <p className="sec-ey">Lo que hacemos</p>
@@ -98,6 +112,9 @@ export default function MenuSection() {
               {t.label}
             </button>
           ))}
+          <button className="tab-btn carta-toggle-btn" onClick={() => setCartaOpen(true)}>
+            Ver carta física ↗
+          </button>
           <a href="#builder" className="tab-btn tab-btn-link">
             Crea tu taco <span style={{ fontSize: '1.1em' }}>↓</span>
           </a>
