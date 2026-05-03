@@ -320,16 +320,21 @@ export default function InfoSection() {
       {/* ── GLOSARIO with SLIDER ── */}
       {tab === 'glosario' && (
         <>
-          <div className="cat-bar">
-            {categories.map(c => (
-              <button
-                key={c.id}
-                className={`cat-btn${activeCat === c.id ? ' active' : ''}`}
-                onClick={() => setActiveCat(c.id)}
-              >
-                <span>{c.icon}</span> {c.label}
-              </button>
-            ))}
+          <div className="cat-bar-wrap">
+            <div className="cat-bar">
+              {categories.map(c => (
+                <button
+                  key={c.id}
+                  className={`cat-btn${activeCat === c.id ? ' active' : ''}`}
+                  onClick={() => setActiveCat(c.id)}
+                >
+                  <span>{c.icon}</span> {c.label}
+                </button>
+              ))}
+            </div>
+            <div className="swipe-hint" aria-hidden="true">
+              Desliza<span className="sh-arr">›››</span>
+            </div>
           </div>
 
           <Slider items={currentCat.items} key={activeCat} onBoundsChange={setShowHint} />

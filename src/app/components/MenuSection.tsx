@@ -106,18 +106,23 @@ export default function MenuSection() {
           <p className="sec-ey">Lo que hacemos</p>
           <h2 className="sec-title" style={{ marginBottom: 0 }}>La Carta</h2>
         </div>
-        <div className="menu-tabs">
-          {tabs.map(t => (
-            <button key={t.id} className={`tab-btn${active === t.id ? ' active' : ''}`} onClick={() => setActive(t.id)}>
-              {t.label}
+        <div className="menu-tabs-wrap">
+          <div className="menu-tabs">
+            {tabs.map(t => (
+              <button key={t.id} className={`tab-btn${active === t.id ? ' active' : ''}`} onClick={() => setActive(t.id)}>
+                {t.label}
+              </button>
+            ))}
+            <button className="tab-btn carta-toggle-btn" onClick={() => setCartaOpen(true)}>
+              Ver carta física ↗
             </button>
-          ))}
-          <button className="tab-btn carta-toggle-btn" onClick={() => setCartaOpen(true)}>
-            Ver carta física ↗
-          </button>
-          <a href="#builder" className="tab-btn tab-btn-link">
-            Crea tu taco <span style={{ fontSize: '1.1em' }}>↓</span>
-          </a>
+            <a href="#builder" className="tab-btn tab-btn-link">
+              Crea tu taco <span style={{ fontSize: '1.1em' }}>↓</span>
+            </a>
+          </div>
+          <div className="swipe-hint" aria-hidden="true">
+            Desliza<span className="sh-arr">›››</span>
+          </div>
         </div>
       </div>
       <p style={{ fontSize: '.72rem', fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase' as const, color: 'var(--g2)', marginBottom: '1.5rem' }}>
