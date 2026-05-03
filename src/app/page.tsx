@@ -26,24 +26,12 @@ export default function Home() {
       <Nav />
 
       {/* Hero */}
-      <section className="hero" id="inicio">
-        <div className="hero-bg-img">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/img/nuevas/taco alta calidad.jpg" alt="Taco frances Tacos Street - producto estrella" />
-        </div>
-        <div className="eyebrow">
-          <div className="eyebrow-line"></div>
-          <span className="eyebrow-text">The Original French Tacos &middot; Zaragoza</span>
-          <div className="eyebrow-line"></div>
-        </div>
-        <h1 className="hero-title">
-          <span className="y">TACOS</span><br />
-          <span className="out">STREET</span>
-        </h1>
-        <p className="hero-sub-title">The Original French Tacos</p>
+      <section className="hero hero-svg" id="inicio">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/img/nuevas/tacos-web-banner.svg" alt="Tacos Street - The Original French Tacos Zaragoza" className="hero-banner-svg" />
         <div className="cta-row">
           <a href="#carta" className="btn-y">Ver la carta</a>
-          <a href="#nosotros" className="btn-g">Nuestra historia</a>
+          <a href="#locales" className="btn-g">Donde encontrarnos</a>
         </div>
         <div className="stats-bar">
           <div className="stat"><span className="stat-n">2</span><span className="stat-l">Locales en Zaragoza</span></div>
