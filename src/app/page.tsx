@@ -17,7 +17,7 @@ export default function Home() {
         <div className="ticker-track">
           {[0, 1].map(i => (
             <div className="ticker-item" key={i}>
-              The Original French Tacos &nbsp;&bull;&nbsp; Made for Game-Changers &nbsp;&bull;&nbsp; Zaragoza &nbsp;&bull;&nbsp; Abierto todos los dias 13:00-23:00 &nbsp;&bull;&nbsp; Menu estudiante 5,90 mar-jue 13:00-16:00 &nbsp;&bull;&nbsp; Las Fuentes &middot; El Actur &nbsp;&bull;&nbsp; #TacoJomudo &nbsp;&bull;&nbsp; Pide a domicilio en Uber Eats y Glovo &nbsp;&bull;
+              The Original French Tacos &nbsp;&bull;&nbsp; Made for Game-Changers &nbsp;&bull;&nbsp; Zaragoza &nbsp;&bull;&nbsp; Abierto todos los dias 13:00-23:00 &nbsp;&bull;&nbsp; Menu estudiante 5,90 mar-jue 13:00-16:00 &nbsp;&bull;&nbsp; Las Fuentes &middot; El Actur &nbsp;&bull;&nbsp; #TacoJonudo &nbsp;&bull;&nbsp; Pide a domicilio en Uber Eats y Glovo &nbsp;&bull;
             </div>
           ))}
         </div>
@@ -46,7 +46,7 @@ export default function Home() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/img/SVG-WEB-TACOS-STREET/recurso-game-changer.svg" alt="Game Changer" className="strip-icon" />
         <div className="strip-title">MADE FOR<br />GAME-CHANGERS</div>
-        <p className="strip-sub">No es un taco mexicano. Es el taco frances autentico de los barrios de Lyon. La receta original. Las salsas de Francia. Aqui, en Zaragoza. #TacoJomudo</p>
+        <p className="strip-sub">No es un taco mexicano. Es el taco frances autentico de los barrios de Lyon. La receta original. Las salsas de Francia. Aqui, en Zaragoza. #TacoJonudo</p>
       </div>
 
       {/* Menu */}
@@ -380,7 +380,7 @@ export default function Home() {
               <span className="ft-logo">TACOS<span className="dot">&middot;</span>STREET</span>
             </div>
             <span className="ft-tline">The Original French Tacos &middot; Zaragoza</span>
-            <p className="ft-desc">Fundado en 2025 por Karim, Omar y Amin. La receta autentica del taco frances de Lyon, traida directamente a las calles de Zaragoza. Made for Game-Changers. #TacoJomudo</p>
+            <p className="ft-desc">Fundado en 2025 por Karim, Omar y Amin. La receta autentica del taco frances de Lyon, traida directamente a las calles de Zaragoza. Made for Game-Changers. #TacoJonudo</p>
             <div className="socials">
               <a href="https://www.instagram.com/tacosstreet.es/" className="si" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram size={18} /></a>
               <a href="https://www.tiktok.com/@tacosstreet.es" className="si" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><FaTiktok size={18} /></a>

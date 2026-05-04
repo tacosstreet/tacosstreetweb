@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Tacos Street Zaragoza",
   },
   description:
-    "Tacos Street: el taco francés auténtico de Lyon en Zaragoza. Salsas importadas de Francia, receta original. Dos locales: Las Fuentes (C/Minas 19) y El Actur (C/Gabriel Celaya 14). Pide en Uber Eats y Glovo. #TacoJomudo",
+    "Tacos Street: el taco francés auténtico de Lyon en Zaragoza. Salsas importadas de Francia, receta original. Dos locales: Las Fuentes (C/Minas 19) y El Actur (C/Gabriel Celaya 14). Pide en Uber Eats y Glovo. #TacoJonudo",
   keywords: [
     "tacos street", "taco francés zaragoza", "tacos zaragoza", "taco frances", "tacos street zaragoza",
     "taco jomudo", "comida francesa zaragoza", "uber eats zaragoza tacos", "glovo zaragoza tacos",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tacos Street — The Original French Tacos · Zaragoza",
     description:
-      "El taco francés auténtico de Lyon en Zaragoza. Salsas importadas de Francia, receta original. #TacoJomudo",
+      "El taco francés auténtico de Lyon en Zaragoza. Salsas importadas de Francia, receta original. #TacoJonudo",
     images: [OG_IMAGE],
     creator: "@tacosstreetes",
   },
