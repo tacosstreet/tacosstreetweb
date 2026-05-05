@@ -28,7 +28,7 @@ nav{position:fixed;top:38px;left:0;right:0;z-index:400;display:flex;align-items:
 .nav-links a{font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gr);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--y)}
 .nav-order-wrap{position:relative}
-.nav-order{background:var(--y)!important;color:var(--bk)!important;padding:.55rem 1.4rem!important;font-weight:700!important;cursor:pointer}
+.nav-order{background:var(--y)!important;color:var(--bk)!important;padding:.55rem 1.4rem!important;font-weight:700!important;cursor:pointer;white-space:nowrap}
 .nav-order:hover{background:var(--yh)!important}
 .order-dropdown{position:absolute;top:100%;right:0;background:var(--bk);border:1px solid #333;min-width:220px;opacity:0;pointer-events:none;transform:translateY(4px);transition:opacity .2s,transform .2s;z-index:300;margin-top:.5rem}
 .nav-order-wrap:hover .order-dropdown,.order-dropdown:hover{opacity:1;pointer-events:all;transform:translateY(0)}
@@ -446,6 +446,8 @@ footer{background:var(--bk);border-top:1px solid #1a1a1a}
   .press-grid{grid-template-columns:1fr 1fr}
   .community-grid{grid-template-columns:1fr 1fr}
   .social-grid{grid-template-columns:1fr 1fr}
+  .nav-links{gap:1.4rem}
+  .nav-links a{font-size:.72rem;letter-spacing:.08em}
 }
 @media(max-width:900px){
   .hamburger{display:flex}
