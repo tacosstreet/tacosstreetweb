@@ -57,6 +57,15 @@ const salsas = [
 
 function fmt(p: number) { return p.toFixed(2).replace('.', ',') + '€'; }
 
+type SavedTaco = {
+  id: number;
+  sizeId: string;
+  meats: string[];
+  extras: string[];
+  salsas: string[];
+  price: number;
+};
+
 export default function TacoBuilder() {
   const [step, setStep] = useState(0);
   const [dir, setDir] = useState<'fwd' | 'bwd'>('fwd');
@@ -65,14 +74,16 @@ export default function TacoBuilder() {
   const [selExtras, setSelExtras] = useState<string[]>([]);
   const [selSalsas, setSelSalsas] = useState<string[]>([]);
   const [done, setDone] = useState(false);
+  const [savedTacos, setSavedTacos] = useState<SavedTaco[]>([]);
+  const [resetKey, setResetKey] = useState(0);
 
   const sizeData = sizes.find(s => s.id === sizeId);
   const maxMeats = sizeId === 'm' ? 1 : sizeId === 'l' ? 2 : 3;
 
-  function calcPrice() {
-    let t = sizeData?.price ?? 0;
-    selMeats.forEach(id => { const m = meats.find(x => x.id === id); if (m?.extra) t += m.extra; });
-    selExtras.forEach(id => { const e = extras.find(x => x.id === id); if (e) t += e.price; });
+  function calcPrice(sid = sizeId, sm = selMeats, se = selExtras) {
+    let t = sizes.find(s => s.id === sid)?.price ?? 0;
+    sm.forEach(id => { const m = meats.find(x => x.id === id); if (m?.extra) t += m.extra; });
+    se.forEach(id => { const e = extras.find(x => x.id === id); if (e) t += e.price; });
     return t;
   }
 
@@ -88,28 +99,71 @@ export default function TacoBuilder() {
     setSelSalsas(p => p.includes(id) ? p.filter(x => x !== id) : p.length >= 2 ? p : [...p, id]);
   }
 
-  function reset() {
-    setStep(0); setSizeId(null); setSelMeats([]); setSelExtras([]); setSelSalsas([]); setDone(false); setDir('fwd');
+  function finishTaco() {
+    setSavedTacos(p => [...p, {
+      id: Date.now(),
+      sizeId: sizeId!,
+      meats: [...selMeats],
+      extras: [...selExtras],
+      salsas: [...selSalsas],
+      price: calcPrice(),
+    }]);
+    setDone(true);
   }
 
+  function startNew() {
+    setStep(0); setSizeId(null); setSelMeats([]); setSelExtras([]); setSelSalsas([]);
+    setDone(false); setDir('fwd'); setResetKey(k => k + 1);
+  }
+
+  function clearAll() {
+    setSavedTacos([]); startNew();
+  }
+
+  function removeTaco(id: number) {
+    setSavedTacos(p => p.filter(t => t.id !== id));
+  }
+
+  const totalPrice = savedTacos.reduce((a, t) => a + t.price, 0);
   const canNext = [!!sizeId, selMeats.length > 0, true, selSalsas.length > 0];
 
   if (done) return (
     <section className="tb-section" id="builder">
-      <div className="tb-done">
-        <div className="tb-done-icon"><img src="/img/SVG-WEB-TACOS-STREET/mascota-taco.svg" alt="Taco listo" /></div>
-        <h3 className="tb-done-title">¡Tu taco está listo!</h3>
-        <p className="tb-done-sub">Muéstraselo al equipo cuando llegues o pídelo online</p>
-        <div className="tb-done-recap">
-          <div className="tb-recap-row"><span>Tamaño</span><strong>{sizeData?.label} — {sizeData?.sub}</strong></div>
-          <div className="tb-recap-row"><span>Carnes</span><strong>{selMeats.map(id => meats.find(m => m.id === id)?.name).join(', ')}</strong></div>
-          {selExtras.length > 0 && <div className="tb-recap-row"><span>Extras</span><strong>{selExtras.map(id => extras.find(e => e.id === id)?.name).join(', ')}</strong></div>}
-          <div className="tb-recap-row"><span>Salsas</span><strong>{selSalsas.map(id => salsas.find(s => s.id === id)?.name).join(' + ')}</strong></div>
-          <div className="tb-recap-price">Precio estimado: <strong>{fmt(calcPrice())}</strong></div>
+      {savedTacos.length > 0 && (
+        <div className="tb-order">
+          <div className="tb-order-header">
+            <h3 className="tb-order-title">Tu pedido — {savedTacos.length} taco{savedTacos.length > 1 ? 's' : ''}</h3>
+            <button className="tb-order-clear" onClick={clearAll}>Limpiar todo</button>
+          </div>
+          {savedTacos.map((t, i) => {
+            const sz = sizes.find(s => s.id === t.sizeId);
+            return (
+              <div key={t.id} className="tb-order-row">
+                <span className="tb-order-num">#{i + 1}</span>
+                <div className="tb-order-info">
+                  <strong>Taco {sz?.label} <span className="tb-order-sub">{sz?.sub}</span></strong>
+                  <span>{t.meats.map(id => meats.find(m => m.id === id)?.name).join(' + ')}</span>
+                  {t.extras.length > 0 && <span className="tb-order-extras">{t.extras.map(id => extras.find(e => e.id === id)?.name).join(', ')}</span>}
+                  <span className="tb-order-salsas">{t.salsas.map(id => salsas.find(s => s.id === id)?.name).join(' + ')}</span>
+                </div>
+                <span className="tb-order-price">{fmt(t.price)}</span>
+                <button className="tb-order-remove" onClick={() => removeTaco(t.id)} aria-label="Eliminar">✕</button>
+              </div>
+            );
+          })}
+          <div className="tb-order-total">Total estimado: <strong>{fmt(totalPrice)}</strong></div>
         </div>
+      )}
+      <div className="tb-done">
+        <div className="tb-done-icon">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/img/SVG-WEB-TACOS-STREET/mascota-taco.svg" alt="Taco listo" />
+        </div>
+        <h3 className="tb-done-title">¡Taco añadido!</h3>
+        <p className="tb-done-sub">Muéstraselo al equipo cuando llegues o pídelo online</p>
         <div className="tb-done-btns">
           <a href="https://www.ubereats.com/es/store/tacos-street-las-fuentes/Tky_8BkAW6qgCsPNzrHEHg" target="_blank" rel="noopener noreferrer" className="btn-y">Pedir en Uber Eats →</a>
-          <button className="tb-btn-reset" onClick={reset}>Crear otro taco</button>
+          <button className="tb-btn-reset" onClick={startNew}>+ Crear otro taco</button>
         </div>
       </div>
     </section>
@@ -117,6 +171,30 @@ export default function TacoBuilder() {
 
   return (
     <section className="tb-section" id="builder">
+      {savedTacos.length > 0 && (
+        <div className="tb-order tb-order-mini">
+          <div className="tb-order-header">
+            <span className="tb-order-title">{savedTacos.length} taco{savedTacos.length > 1 ? 's' : ''} en tu pedido — {fmt(totalPrice)}</span>
+            <button className="tb-order-clear" onClick={clearAll}>Limpiar</button>
+          </div>
+          {savedTacos.map((t, i) => {
+            const sz = sizes.find(s => s.id === t.sizeId);
+            return (
+              <div key={t.id} className="tb-order-row">
+                <span className="tb-order-num">#{i + 1}</span>
+                <div className="tb-order-info">
+                  <strong>Taco {sz?.label}</strong>
+                  <span>{t.meats.map(id => meats.find(m => m.id === id)?.name).join(' + ')}</span>
+                  <span className="tb-order-salsas">{t.salsas.map(id => salsas.find(s => s.id === id)?.name).join(' + ')}</span>
+                </div>
+                <span className="tb-order-price">{fmt(t.price)}</span>
+                <button className="tb-order-remove" onClick={() => removeTaco(t.id)} aria-label="Eliminar">✕</button>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
       <p className="sec-ey">Personaliza al máximo</p>
       <h2 className="sec-title">Crea tu taco</h2>
 
@@ -138,8 +216,8 @@ export default function TacoBuilder() {
         </div>
       </div>
 
-      {/* Step content */}
-      <div className={`tb-content tb-${dir}`} key={step}>
+      {/* Step content — resetKey in key forces full remount on reset */}
+      <div className={`tb-content tb-${dir}`} key={`${resetKey}-${step}`}>
 
         {/* Step 0: Size */}
         {step === 0 && (
@@ -252,9 +330,9 @@ export default function TacoBuilder() {
         ) : (
           <button
             className={`tb-btn-next${canNext[step] ? '' : ' disabled'}`}
-            onClick={() => canNext[step] && setDone(true)}
+            onClick={() => canNext[step] && finishTaco()}
           >
-            Ver mi taco →
+            Añadir taco →
           </button>
         )}
       </div>
