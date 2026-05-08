@@ -113,7 +113,7 @@ export default function Home() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/img/web/gamechangers.jpg" alt="Game Changers" loading="lazy" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="img/Emocionales/Emocional 12.jpg" alt="Taco Street con packaging" loading="lazy" />
+        <img src="/img/Emocionales/Emocional 12.jpg" alt="Taco Street con packaging" loading="lazy" />
       </div>
 
       {/* About */}
@@ -338,7 +338,7 @@ export default function Home() {
           </div>
           <div className="loc-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="loc-img" src="img/Emocionales/Emocional 2.jpg" alt="Exterior de Tacos Street Actur" loading="lazy" />
+            <img className="loc-img" src="/img/Emocionales/Emocional 2.jpg" alt="Exterior de Tacos Street Actur" loading="lazy" />
             <div className="loc-num">Local 02 &middot; El Actur</div>
             <div className="loc-name">El Actur</div>
             <p className="loc-addr">C/ Gabriel Celaya, 14 &middot; 50018 Zaragoza</p>
