@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     creator: "@tacosstreetes",
   },
   icons: {
-    icon: "/img/SVG-WEB-TACOS-STREET/isotipo.svg",
-    apple: "/img/SVG-WEB-TACOS-STREET/isotipo.svg",
+    icon: "/img/SVG-WEB-TACOS-STREET/logo-redondo.svg",
+    apple: "/img/SVG-WEB-TACOS-STREET/logo-redondo.svg",
   },
   manifest: "/manifest.json",
   verification: {},
