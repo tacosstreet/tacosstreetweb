@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /.next/
 
 Sitemap: https://tacosstreet.es/sitemap.xml
