@@ -276,14 +276,14 @@ export default function Home() {
       <section className="reviews-section">
         <p className="sec-ey">Lo que dice Zaragoza</p>
         <h2 className="sec-title">4.6 <span style={{ color: 'var(--y)' }}>&#9733;</span><br />Google Reviews</h2>
-        <div className="reviews-grid">
+        <MobileCarousel count={6} scrollClass="reviews-grid">
           <div className="rv"><div className="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p className="rv-text">&ldquo;El taco mas grande que he visto en mi vida. El XXL es una locura, con uno tienes de sobra. La salsa de queso casera esta increible. Volvere seguro.&rdquo;</p><div className="rv-author">&mdash; Javier M. &middot; Google</div></div>
           <div className="rv"><div className="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p className="rv-text">&ldquo;El personal super amable, te explican todo si es tu primera vez. Pedi el Django y me conquisto. La cantidad de combinaciones es impresionante. Mi nuevo favorito.&rdquo;</p><div className="rv-author">&mdash; Laura P. &middot; Google</div></div>
           <div className="rv"><div className="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p className="rv-text">&ldquo;Las bebidas importadas son un plus que no esperaba. La Hawaii esta increible. Probe el Tropical y me volo la cabeza. Conceptualmente muy diferente.&rdquo;</p><div className="rv-author">&mdash; Ahmed S. &middot; Uber Eats</div></div>
           <div className="rv"><div className="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div><p className="rv-text">&ldquo;Concepto muy diferente a todo lo que hay en Zaragoza. Los jalapenos de queso son adictivos. La relacion calidad-precio es muy buena para lo que te ponen.&rdquo;</p><div className="rv-author">&mdash; Maria C. &middot; TripAdvisor</div></div>
           <div className="rv"><div className="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p className="rv-text">&ldquo;Lo que no sabias que necesitabas. El taco frances no tiene nada que ver con el mexicano pero te engancha. Pedi para llevar y llego perfecto. Repito cada semana.&rdquo;</p><div className="rv-author">&mdash; Roberto L. &middot; Google</div></div>
           <div className="rv"><div className="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p className="rv-text">&ldquo;Vine atraido por los videos de Instagram y no me decepciono. El menu estudiante a 5,90 lunes a viernes es una pasada. Ahora vengo con mis amigos de la uni.&rdquo;</p><div className="rv-author">&mdash; Adrian N. &middot; Instagram</div></div>
-        </div>
+        </MobileCarousel>
       </section>
 
       {/* Instagram */}
