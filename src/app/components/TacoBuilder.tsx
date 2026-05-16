@@ -10,14 +10,15 @@ const sizes = [
 ];
 
 const meats = [
-  { id: 'pollo-marinado', name: 'Pollo Marinado', emoji: '🌿', desc: 'A la plancha con hierbas. Versátil.', extra: 0 },
+  { id: 'pollo-marinado', name: 'Pollo Marinado', emoji: '🍗', desc: 'A la plancha con hierbas. Versátil.', extra: 0 },
   { id: 'carne-picada', name: 'Carne Picada', emoji: '🥩', desc: 'Ternera sazonada. Base del Django.', extra: 0 },
-  { id: 'merguez', name: 'Merguez', emoji: '🌶️', desc: 'Salchicha norteafricana especiada.', extra: 0, hot: true },
+  { id: 'merguez', name: 'Merguez', emoji: '🌶️', desc: 'Salchicha norteafricana especiada.', extra: 0 },
   { id: 'cordon-bleu', name: 'Cordon Bleu', emoji: '🥇', desc: 'Rellena de jamón y queso fundido.', extra: 0 },
   { id: 'nuggets', name: 'Nuggets', emoji: '🟡', desc: 'Crujientes y tiernos.', extra: 0 },
   { id: 'carne-kebab', name: 'Carne Kebab', emoji: '🫓', desc: 'Ternera marinada asada vertical.', extra: 0 },
-  { id: 'pollo-tikka', name: 'Pollo Tikka', emoji: '🍗', desc: 'Marinado en yogur y especias tikka.', extra: 0, hot: true },
-  { id: 'tenders', name: 'Tenders', emoji: '✨', desc: 'Rebozado extra crujiente. Premium.', extra: 1 },
+  { id: 'falafel', name: 'Falafel', emoji: '🧆', desc: 'Bolitas de garbanzos y especias. Crujiente por fuera, tierno por dentro.', extra: 0 },
+  { id: 'pollo-tikka', name: 'Pollo Tikka', emoji: '🍗', desc: 'Marinado en yogur y especias tikka.', extra: 1 },
+  { id: 'tenders', name: 'Tenders', emoji: '✨', desc: 'Rebozado extra crujiente. Premium.', extra: 1, hot: true },
 ];
 
 const extras = [
@@ -162,7 +163,6 @@ export default function TacoBuilder() {
         <h3 className="tb-done-title">¡Taco añadido!</h3>
         <p className="tb-done-sub">Muéstraselo al equipo cuando llegues o pídelo online</p>
         <div className="tb-done-btns">
-          <a href="https://www.ubereats.com/es/store/tacos-street-las-fuentes/Tky_8BkAW6qgCsPNzrHEHg" target="_blank" rel="noopener noreferrer" className="btn-y">Pedir en Uber Eats →</a>
           <button className="tb-btn-reset" onClick={startNew}>+ Crear otro taco</button>
         </div>
       </div>

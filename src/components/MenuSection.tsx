@@ -77,7 +77,7 @@ export default function MenuSection() {
         <MC name="Crea tu taco — M" price="6,90€" desc="1 carne a elegir + salsa + gratinado. El tamano clasico. Tortilla tostada a la plancha con patatas fritas y queso fundido dentro." tags={[{ label: "1 carne", cls: "ty" }]} />
         <MC name="Crea tu taco — L" price="7,90€" desc="2 carnes a elegir + salsas + gratinado. Mas grande, mas sabor. La opcion favorita de la casa." tags={[{ label: "2 carnes", cls: "ty" }]} />
         <MC name="Crea tu taco — XL" price="10,90€" desc="3 carnes a elegir + salsas + gratinado. El taco frances mas grande de Espana. Con uno, tienes de sobra." tags={[{ label: "3 carnes", cls: "ty" }, { label: "XXL", cls: "tr" }]} />
-        <MC name="Carnes disponibles" price="" desc="Pollo marinado, carne picada, merguez, cordon bleu, nuggets, carne kebab. Tenders (+1€). Mas de 200 combinaciones posibles." tags={[{ label: "Personalizable", cls: "tw" }]} />
+        <MC name="Carnes disponibles" price="" desc="Pollo marinado, carne picada, merguez, cordon bleu, nuggets, carne kebab, falafel. Tenders (+1€). Mas de 200 combinaciones posibles." tags={[{ label: "Personalizable", cls: "tw" }]} />
         <MC name="Salsas" price="incluidas" desc="Algerienne, Biggy, Samourai, Brazil, Tasty, Andalouse, Harissa, Curry, Chili Thai, BBQ, Ketchup, Mayonesa. Elige hasta 2 salsas." tags={[{ label: "13 salsas", cls: "tg" }]} />
         <MC name="Extras & Gratinados" price="+1€" desc="Extras: Bacon, cebolla caramelizada, champinones, jalapenos, mozzarella, cheddar, boursin. Gratinados: Raclette, mozzarella, cheddar, queso de cabra. Toppings +0,20€: bacon de pavo, cebolla crispy." tags={[{ label: "Personalizable", cls: "tw" }]} />
       </div>
@@ -94,10 +94,12 @@ export default function MenuSection() {
 
       {/* BEBIDAS */}
       <div className={`panel${active === "bebidas" ? " active" : ""}`}>
-        <MC name="Hawaii Tropical" price="1,50€" desc="Refresco importado tropical. La favorita de la casa. Dificil de encontrar en Espana." tags={[{ label: "La mas pedida", cls: "ty" }]} />
-        <MC name="Oasis Tropical" price="1,50€" desc="Refresco tropical importado de Francia. Diferente a todo lo que encuentras en otros restaurantes." />
-        <MC name="Coca-Cola" price="1,50€" desc="El clasico que siempre acompana." />
-        <MC name="7up Mojito" price="1,50€" desc="Refresco con sabor a mojito. Fresco y diferente." tags={[{ label: "Exclusiva", cls: "tg" }]} />
+        <MC name="Hawaii Tropical" price="1,80€" desc="Refresco importado tropical. La favorita de la casa. Dificil de encontrar en Espana." tags={[{ label: "La mas pedida", cls: "ty" }]} />
+        <MC name="Oasis Tropical" price="1,80€" desc="Refresco tropical importado de Francia. Diferente a todo lo que encuentras en otros restaurantes." />
+        <MC name="Coca-Cola" price="1,80€" desc="El clasico que siempre acompana." />
+        <MC name="7up Mojito" price="1,80€" desc="Refresco con sabor a mojito. Fresco y diferente." tags={[{ label: "Exclusiva", cls: "tg" }]} />
+        <MC name="Monster Energy" price="2€" desc="La energetica clasica de Monster. Para los que necesitan un extra." />
+        <MC name="Monster Fresa Cero" price="2€" desc="Monster sabor fresa sin azucar. Refrescante y sin calorias." tags={[{ label: "Sin azucar", cls: "tg" }]} />
       </div>
 
       {/* POSTRES */}
@@ -113,7 +115,6 @@ export default function MenuSection() {
       <div className={`panel${active === "menus" ? " active" : ""}`}>
         <MC name="Menu Estudiante" price="5,90€" desc="Taco + bebida. De martes a jueves, de 13:00 a 16:00, presentando justificante. La mejor relacion calidad-precio de Zaragoza." tags={[{ label: "Mar - Jue", cls: "ty" }, { label: "13:00 - 16:00", cls: "tw" }]} />
         <MC name="Menu Completo" price="desde 10,50€" desc="Taco + entrante + bebida. La experiencia completa de Tacos Street." />
-        <MC name="Combo Para Dos" price="desde 18,00€" desc="2 tacos + entrante compartido + 2 bebidas. Para disfrutar en compania." tags={[{ label: "Para compartir", cls: "tg" }]} />
       </div>
     </section>
   );

@@ -38,19 +38,10 @@ export default function Nav() {
         </a>
         <ul className="nav-links">
           <li><a href="#carta">Carta</a></li>
-          <li><a href="#info">Info & Alergenos</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#nosotros">Historia</a></li>
           <li><a href="#comunidad">Comunidad</a></li>
-          <li><a href="#historia">Historia</a></li>
-          <li><a href="#locales">Locales</a></li>
-          <li className="nav-order-wrap">
-            <span className="nav-order">Pedir ahora</span>
-            <div className="order-dropdown">
-              <a href="https://www.ubereats.com/es/store/tacos-street-las-fuentes/Tky_8BkAW6qgCsPNzrHEHg" target="_blank" rel="noopener noreferrer"><span className="od-icon">UE</span> Uber Eats</a>
-              <a href="https://glovoapp.com/es/es/zaragoza/stores/tacos-street-zar" target="_blank" rel="noopener noreferrer"><span className="od-icon">GL</span> Glovo</a>
-              <a href="tel:+34643677898"><span className="od-icon">T</span> Llamar para recoger</a>
-            </div>
-          </li>
+          <li><a href="#locales">Cómo encontrarnos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
         <button className={`hamburger${menuOpen ? ' active' : ''}`} onClick={toggle} aria-label="Menu">
           <span></span><span></span><span></span>
@@ -68,14 +59,12 @@ export default function Nav() {
         </div>
         <div className="mm-links">
           <a href="#carta" onClick={close}>Carta</a>
-          <a href="#info" onClick={close}>Info & Alergenos</a>
-          <a href="#nosotros" onClick={close}>Nosotros</a>
+          <a href="#nosotros" onClick={close}>Historia</a>
           <a href="#comunidad" onClick={close}>Comunidad</a>
-          <a href="#historia" onClick={close}>Historia</a>
-          <a href="#locales" onClick={close}>Locales</a>
-          <a href="https://www.ubereats.com/es/store/tacos-street-las-fuentes/Tky_8BkAW6qgCsPNzrHEHg" target="_blank" rel="noopener noreferrer" className="mm-order" onClick={close}>Uber Eats</a>
-          <a href="https://glovoapp.com/es/es/zaragoza/stores/tacos-street-zar" target="_blank" rel="noopener noreferrer" className="mm-order" style={{ background: 'transparent', color: 'var(--y)', border: '2px solid var(--y)' }} onClick={close}>Glovo</a>
-          <a href="tel:+34643677898" className="mm-order" style={{ background: 'transparent', color: 'var(--wh)', border: '2px solid #333' }} onClick={close}>Llamar para recoger</a>
+          <a href="#locales" onClick={close}>Cómo encontrarnos</a>
+          <a href="#contacto" onClick={close}>Contacto</a>
+          <a href="https://www.ubereats.com/es/store/tacos-street-las-fuentes/Tky_8BkAW6qgCsPNzrHEHg" target="_blank" rel="noopener noreferrer" className="mm-order" onClick={close}>Pedir en Uber Eats</a>
+          <a href="https://glovoapp.com/es/es/zaragoza/stores/tacos-street-zar" target="_blank" rel="noopener noreferrer" className="mm-order mm-order-alt" onClick={close}>Pedir en Glovo</a>
         </div>
       </div>
     </>

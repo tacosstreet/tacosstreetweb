@@ -1,7 +1,5 @@
 "use client";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
-import { SiUbereats } from "react-icons/si";
-import { SiGlovo } from "react-icons/si";
 
 const socials = [
   {
@@ -19,22 +17,6 @@ const socials = [
     handle: "@tacosstreet.es",
     cta: "Seguir",
     gradient: "linear-gradient(135deg, #00f2ea, #ff0050)",
-  },
-  {
-    href: "https://www.ubereats.com/es/store/tacos-street-las-fuentes/Tky_8BkAW6qgCsPNzrHEHg",
-    icon: SiUbereats,
-    name: "Uber Eats",
-    handle: "Tacos Street Las Fuentes",
-    cta: "Pedir",
-    gradient: "linear-gradient(135deg, #06C167, #05a85a)",
-  },
-  {
-    href: "https://glovoapp.com/es/es/zaragoza/stores/tacos-street-zar",
-    icon: SiGlovo,
-    name: "Glovo",
-    handle: "Tacos Street Zaragoza",
-    cta: "Pedir",
-    gradient: "linear-gradient(135deg, #00a082, #00c99d)",
   },
 ];
 

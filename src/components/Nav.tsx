@@ -55,9 +55,6 @@ export default function Nav() {
               <a href="https://glovoapp.com/es/es/zaragoza/stores/tacos-street-zar" target="_blank" rel="noopener">
                 <span className="od-icon">GL</span> Glovo
               </a>
-              <a href="tel:+34643677898">
-                <span className="od-icon">T</span> Llamar para recoger
-              </a>
             </div>
           </li>
         </ul>
@@ -77,9 +74,6 @@ export default function Nav() {
         </a>
         <a href="https://glovoapp.com/es/es/zaragoza/stores/tacos-street-zar" target="_blank" rel="noopener" className="mm-order" onClick={close} style={{ background: "transparent", color: "var(--y)", border: "2px solid var(--y)" }}>
           Glovo
-        </a>
-        <a href="tel:+34643677898" className="mm-order" onClick={close} style={{ background: "transparent", color: "var(--wh)", border: "2px solid #333" }}>
-          Llamar para recoger
         </a>
       </div>
     </>

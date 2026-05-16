@@ -38,14 +38,28 @@ const categories: Category[] = [
   {
     id: 'carnes', label: 'Carnes', icon: '🥩',
     items: [
-      { name: 'Merguez', emoji: '🌭', gradient: 'linear-gradient(135deg,#dc2626,#7f1d1d)', desc: 'Salchicha especiada de ternera y cordero con pimentón, comino y harissa. Es como la chistorra pero magrebí. Sabor intenso y fundamental en la gastronomía callejera francesa.', origin: 'Norte de África / Francia', heat: 1 },
-      { name: 'Pollo Tikka', emoji: '🍗', gradient: 'linear-gradient(135deg,#ea580c,#9a3412)', desc: 'Marinado en yogur con especias tikka (comino, cúrcuma, pimentón). Tierno por dentro, dorado por fuera. De origen indio, adoptado por toda Europa.', origin: 'India / Reino Unido', heat: 1 },
+      { name: 'Merguez', emoji: '🌭', gradient: 'linear-gradient(135deg,#dc2626,#7f1d1d)', desc: 'Salchicha especiada de ternera y cordero con pimentón, comino y harissa. Es como la chistorra pero magrebí. Sabor intenso y fundamental en la gastronomía callejera francesa.', origin: 'Norte de África / Francia' },
+      { name: 'Pollo Tikka', emoji: '🍗', gradient: 'linear-gradient(135deg,#ea580c,#9a3412)', desc: 'Marinado en yogur con especias tikka (comino, cúrcuma, pimentón). Tierno por dentro, dorado por fuera. De origen indio, adoptado por toda Europa.', origin: 'India / Reino Unido' },
       { name: 'Cordon Bleu', emoji: '🥇', gradient: 'linear-gradient(135deg,#d97706,#78350f)', desc: 'Pechuga empanada rellena de jamón y queso fundido. Crujiente por fuera, jugosa por dentro. Un clásico europeo.', origin: 'Francia / Suiza' },
-      { name: 'Pollo Marinado', emoji: '🌿', gradient: 'linear-gradient(135deg,#65a30d,#365314)', desc: 'Con hierbas y especias suaves, a la plancha. La opción más versátil — combina con cualquier salsa.', origin: 'Clásico' },
+      { name: 'Pollo Marinado', emoji: '🍗', gradient: 'linear-gradient(135deg,#65a30d,#365314)', desc: 'Con hierbas y especias suaves, a la plancha. La opción más versátil — combina con cualquier salsa.', origin: 'Clásico' },
       { name: 'Carne Picada', emoji: '🥩', gradient: 'linear-gradient(135deg,#92400e,#451a03)', desc: 'Ternera picada sazonada a la plancha. De las opciones mas clasicas', origin: 'Clásico' },
-      { name: 'Tenders', emoji: '✨', gradient: 'linear-gradient(135deg,#f59e0b,#92400e)', desc: 'Tiras de pollo con rebozado extra crujiente. Premium (+1€). Merece cada céntimo.', origin: 'Clásico' },
+      { name: 'Tenders', emoji: '✨', gradient: 'linear-gradient(135deg,#f59e0b,#92400e)', desc: 'Tiras de pollo con rebozado extra crujiente. Premium (+1€). Merece cada céntimo.', origin: 'Clásico', heat: 1 },
       { name: 'Nuggets', emoji: '🟡', gradient: 'linear-gradient(135deg,#eab308,#a16207)', desc: 'Pollo empanado y frito. Crujientes por fuera, tiernos por dentro. Como carne del taco o entrante.', origin: 'Clásico' },
       { name: 'Carne Kebab', emoji: '🫓', gradient: 'linear-gradient(135deg,#b45309,#78350f)', desc: 'Ternera marinada, asada en vertical y cortada en láminas finas. Jugosa e intensa.', origin: 'Turquía / Oriente Medio' },
+      { name: 'Falafel', emoji: '🧆', gradient: 'linear-gradient(135deg,#65a30d,#14532d)', desc: 'Bolitas de garbanzos y especias orientales. Crujiente por fuera, tierno por dentro. Opción vegetal con carácter.', origin: 'Oriente Medio' },
+    ],
+  },
+  {
+    id: 'entrantes', label: 'Entrantes', icon: '🍟',
+    items: [
+      { name: 'Patatas Fritas', emoji: '🍟', gradient: 'linear-gradient(135deg,#f59e0b,#b45309)', desc: 'Racion de patatas fritas crujientes. Con cheddar, salsa de queso o raclette.', origin: 'Clasico' },
+      { name: 'Patatas con Salsa de Queso y Bacon', emoji: '🧀', gradient: 'linear-gradient(135deg,#FFD600,#ca8a04)', desc: 'Patatas fritas con salsa de queso casera y bacon. El entrante mas pedido de la carta.', origin: 'Receta propia', img: '/img/uber/patatas-fritas-con-salsa-de-queso-y-bacon.png' },
+      { name: 'Nuggets', emoji: '🟡', gradient: 'linear-gradient(135deg,#eab308,#a16207)', desc: 'Nuggets de pollo dorados. x4 / x6 / x8. Con dip a elegir.', origin: 'Clasico' },
+      { name: 'Cheese Jalapenos', emoji: '🌶️', gradient: 'linear-gradient(135deg,#16a34a,#065f46)', desc: 'Jalapenos rellenos de queso fundido, rebozados y fritos. x4 / x6 / x8.', origin: 'Tex-Mex', heat: 2 },
+      { name: 'Chicken Wings', emoji: '🍗', gradient: 'linear-gradient(135deg,#dc2626,#7f1d1d)', desc: 'Alitas crujientes con salsa a elegir. x4 / x6 / x8.', origin: 'Clasico' },
+      { name: 'Sticks Mozzarella', emoji: '🤍', gradient: 'linear-gradient(135deg,#e7e5e4,#78716c)', desc: 'Mozzarella rebozada, crujiente por fuera y fundida por dentro. x4 / x6 / x8.', origin: 'Clasico' },
+      { name: 'Tenders', emoji: '✨', gradient: 'linear-gradient(135deg,#f59e0b,#92400e)', desc: 'Tiras de pollo con rebozado extra crujiente. x4 / x6 / x8. Con dip a elegir.', origin: 'Clasico' },
+      { name: 'Onion Rings', emoji: '⭕', gradient: 'linear-gradient(135deg,#d97706,#78350f)', desc: 'Aros de cebolla crujientes rebozados. x4 / x6 / x8.', origin: 'Clasico' },
     ],
   },
   {
@@ -78,6 +92,7 @@ const categories: Category[] = [
       { name: 'Monster Energy', emoji: '⚡', gradient: 'linear-gradient(135deg,#4ade80,#14532d)', desc: 'La energética clásica de Monster. Para los que necesitan un extra.', origin: 'Importación', img: '/img/uber/monster-energy.png' },
       { name: 'Monster Mango Loco', emoji: '🥭', gradient: 'linear-gradient(135deg,#f59e0b,#78350f)', desc: 'Monster sabor mango. Más suave que el original y con sabor tropical.', origin: 'Importación', img: '/img/uber/monster-mangoloco.png' },
       { name: 'Monster Ultra Zero', emoji: '🤍', gradient: 'linear-gradient(135deg,#e2e8f0,#475569)', desc: 'Monster sin azúcar. Mismo efecto, sin las calorías.', origin: 'Importación', img: '/img/uber/monster-ultra-zero-azucar.png' },
+      { name: 'Monster Fresa Cero', emoji: '🍓', gradient: 'linear-gradient(135deg,#f43f5e,#881337)', desc: 'Monster sabor fresa sin azúcar. Refrescante y sin calorías.', origin: 'Importación', img: '/img/uber/monster-fresa.png' },
       { name: 'Capri-Sun', emoji: '🧃', gradient: 'linear-gradient(135deg,#f97316,#9a3412)', desc: 'El zumo en bolsita más icónico. Para los que no crecen nunca.', origin: 'Clásico', img: '/img/uber/capri-sun.png' },
       { name: 'Poms', emoji: '🍎', gradient: 'linear-gradient(135deg,#dc2626,#7f1d1d)', desc: 'Refresco de manzana importado. Suave y natural.', origin: 'Importación', img: '/img/uber/poms.png' },
       { name: 'Agua', emoji: '💧', gradient: 'linear-gradient(135deg,#7dd3fc,#0c4a6e)', desc: 'Agua mineral. Siempre disponible.', origin: 'Clásico', img: '/img/uber/agua.png' },
@@ -103,6 +118,12 @@ function Slider({ items, onBoundsChange }: { items: Product[]; onBoundsChange?: 
   const [canLeft, setCanLeft] = useState(false);
   const [canRight, setCanRight] = useState(true);
   const total = items.length;
+  const isDragging = useRef(false);
+  const dragStartX = useRef(0);
+  const dragScrollLeft = useRef(0);
+  const lastX = useRef(0);
+  const vel = useRef(0);
+  const lastT = useRef(0);
 
   const updateBounds = useCallback(() => {
     const track = trackRef.current;
@@ -132,6 +153,48 @@ function Slider({ items, onBoundsChange }: { items: Product[]; onBoundsChange?: 
 
   const prev = () => scrollByPage(-1);
   const next = () => scrollByPage(1);
+
+  const onMouseDown = useCallback((e: React.MouseEvent) => {
+    const t = trackRef.current;
+    if (!t) return;
+    isDragging.current = true;
+    dragStartX.current = e.pageX;
+    dragScrollLeft.current = t.scrollLeft;
+    lastX.current = e.pageX;
+    vel.current = 0;
+    lastT.current = Date.now();
+    t.style.cursor = 'grabbing';
+    t.style.userSelect = 'none';
+    t.style.scrollSnapType = 'none';
+  }, []);
+
+  const onMouseMove = useCallback((e: React.MouseEvent) => {
+    if (!isDragging.current) return;
+    const t = trackRef.current;
+    if (!t) return;
+    const now = Date.now();
+    const dt = now - lastT.current;
+    if (dt > 0) vel.current = (e.pageX - lastX.current) / dt;
+    lastX.current = e.pageX;
+    lastT.current = now;
+    t.scrollLeft = dragScrollLeft.current - (e.pageX - dragStartX.current);
+  }, []);
+
+  const onMouseUp = useCallback(() => {
+    const t = trackRef.current;
+    if (!t || !isDragging.current) return;
+    isDragging.current = false;
+    t.style.cursor = 'grab';
+    t.style.userSelect = '';
+    t.style.scrollSnapType = '';
+    const v = vel.current;
+    let targetIdx = Math.abs(v) > 0.3
+      ? v > 0 ? current - 1 : current + 1
+      : current;
+    targetIdx = Math.max(0, Math.min(targetIdx, items.length - 1));
+    setCurrent(targetIdx);
+    scrollTo(targetIdx);
+  }, [current, items.length, scrollTo]);
 
   /* sync dots + bounds on scroll */
   useEffect(() => {
@@ -182,7 +245,16 @@ function Slider({ items, onBoundsChange }: { items: Product[]; onBoundsChange?: 
       )}
 
       {/* Track */}
-      <div className="slider-track" ref={trackRef}>
+      <div
+        className="slider-track"
+        ref={trackRef}
+        style={{ cursor: 'grab' }}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMouseMove}
+        onMouseUp={onMouseUp}
+        onMouseLeave={onMouseUp}
+        onDragStart={e => e.preventDefault()}
+      >
         {items.map((item, i) => (
           <div className="slide-card" key={item.name}>
             <div className="slide-visual">
@@ -359,7 +431,7 @@ export default function InfoSection() {
             </div>
             <div className="alg-bottom-card">
               <span className="alg-bottom-badge">📞</span>
-              <span>Dudas? <a href="tel:+34643677898">643 677 898</a></span>
+              <span>Dudas? <a href="mailto:infotacosstreet@gmail.com">infotacosstreet@gmail.com</a></span>
             </div>
           </div>
         </div>
