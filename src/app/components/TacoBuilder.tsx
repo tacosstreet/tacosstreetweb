@@ -4,9 +4,9 @@ import { useState } from 'react';
 const STEPS = ['Tamaño', 'Carne', 'Extras', 'Salsas'];
 
 const sizes = [
-  { id: 'm', label: 'M', sub: '1 carne', desc: 'El tamaño perfecto. Tortilla tostada, patatas y queso fundido.', price: 6.90, img: '/img/uber/tacom_sin_fondo.png' },
-  { id: 'l', label: 'L', sub: '2 carnes', desc: 'Más relleno, más sabor. El favorito de la casa.', price: 7.90, img: '/img/uber/tacol_sin_fondo.png' },
-  { id: 'xl', label: 'XL', sub: '3 carnes', desc: 'El más grande de España. Con uno tienes de sobra.', price: 10.90, img: '/img/uber/tacoxl_sin_fondo.png' },
+  { id: 'm', label: 'M', sub: '1 carne', desc: 'El tamaño perfecto. Tortilla tostada, patatas y queso fundido.', price: 6.90, img: '/img/uber/tacom_sin_fondo.webp' },
+  { id: 'l', label: 'L', sub: '2 carnes', desc: 'Más relleno, más sabor. El favorito de la casa.', price: 7.90, img: '/img/uber/tacol_sin_fondo.webp' },
+  { id: 'xl', label: 'XL', sub: '3 carnes', desc: 'El más grande de España. Con uno tienes de sobra.', price: 10.90, img: '/img/uber/tacoxl_sin_fondo.webp' },
 ];
 
 const meats = [
@@ -40,20 +40,20 @@ const extras = [
 ];
 
 const salsas = [
-  { id: 'queso', name: 'Queso Casera', img: '/img/salsas/processed/queso.png', signature: true, hot: 0 },
-  { id: 'algerienne', name: 'Algérienne', img: '/img/salsas/processed/algerienne.png', hot: 1 },
-  { id: 'samourai', name: 'Samouraï', img: '/img/salsas/processed/samourai.png', hot: 2 },
-  { id: 'biggy', name: 'Biggy', img: '/img/salsas/processed/biggy.png', hot: 0 },
-  { id: 'brasil', name: 'Brasil', img: '/img/salsas/processed/brazil.png', hot: 0 },
-  { id: 'andalouse', name: 'Andalouse', img: '/img/salsas/processed/andalouse.png', hot: 0 },
-  { id: 'tasty', name: 'Tasty', img: '/img/salsas/processed/tasty.png', hot: 0 },
-  { id: 'curry', name: 'Curry', img: '/img/salsas/processed/curry.png', hot: 0 },
-  { id: 'chilli-thai', name: 'Chilli Thai', img: '/img/salsas/processed/chilli-thai.png', hot: 2 },
-  { id: 'harissa', name: 'Harissa', img: '/img/salsas/processed/harissa.png', hot: 3 },
-  { id: 'bbq', name: 'BBQ', img: '/img/salsas/processed/bbq.png', hot: 0 },
-  { id: 'ketchup', name: 'Ketchup', img: '/img/salsas/processed/ketchup.png', hot: 0 },
-  { id: 'mayonesa', name: 'Mayonesa', img: '/img/salsas/processed/mayonesa.png', hot: 0 },
-  { id: 'blanca', name: 'Blanca', img: '/img/salsas/processed/blanca.png', hot: 0 },
+  { id: 'queso', name: 'Queso Casera', img: '/img/salsas/processed/queso.webp', signature: true, hot: 0 },
+  { id: 'algerienne', name: 'Algérienne', img: '/img/salsas/processed/algerienne.webp', hot: 1 },
+  { id: 'samourai', name: 'Samouraï', img: '/img/salsas/processed/samourai.webp', hot: 2 },
+  { id: 'biggy', name: 'Biggy', img: '/img/salsas/processed/biggy.webp', hot: 0 },
+  { id: 'brasil', name: 'Brasil', img: '/img/salsas/processed/brazil.webp', hot: 0 },
+  { id: 'andalouse', name: 'Andalouse', img: '/img/salsas/processed/andalouse.webp', hot: 0 },
+  { id: 'tasty', name: 'Tasty', img: '/img/salsas/processed/tasty.webp', hot: 0 },
+  { id: 'curry', name: 'Curry', img: '/img/salsas/processed/curry.webp', hot: 0 },
+  { id: 'chilli-thai', name: 'Chilli Thai', img: '/img/salsas/processed/chilli-thai.webp', hot: 2 },
+  { id: 'harissa', name: 'Harissa', img: '/img/salsas/processed/harissa.webp', hot: 3 },
+  { id: 'bbq', name: 'BBQ', img: '/img/salsas/processed/bbq.webp', hot: 0 },
+  { id: 'ketchup', name: 'Ketchup', img: '/img/salsas/processed/ketchup.webp', hot: 0 },
+  { id: 'mayonesa', name: 'Mayonesa', img: '/img/salsas/processed/mayonesa.webp', hot: 0 },
+  { id: 'blanca', name: 'Blanca', img: '/img/salsas/processed/blanca.webp', hot: 0 },
 ];
 
 function fmt(p: number) { return p.toFixed(2).replace('.', ',') + '€'; }

@@ -43,7 +43,7 @@ export default function ContactForm() {
           </div>
           <label className="cf-field">
             <span className="cf-lbl">Asunto</span>
-            <input type="text" value={subject} onChange={e => setSubject(e.target.value)} placeholder="Reserva, evento, colaboracion..." />
+            <input type="text" value={subject} onChange={e => setSubject(e.target.value)} placeholder="Asunto del mensaje" />
           </label>
           <label className="cf-field">
             <span className="cf-lbl">Mensaje</span>

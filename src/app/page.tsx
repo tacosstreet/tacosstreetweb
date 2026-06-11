@@ -6,6 +6,7 @@ import TacoBuilder from './components/TacoBuilder';
 import MobileCarousel from './components/MobileCarousel';
 import ContactForm from './components/ContactForm';
 import SocialSection from '../components/SocialSection';
+import MundialBunting from './components/MundialBunting';
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
 import { SiUbereats, SiGlovo } from 'react-icons/si';
 
@@ -19,7 +20,7 @@ export default function Home() {
         <div className="ticker-track">
           {[0, 1].map(i => (
             <div className="ticker-item" key={i}>
-              The Original French Tacos &nbsp;&bull;&nbsp; Made for Game-Changers &nbsp;&bull;&nbsp; Zaragoza &nbsp;&bull;&nbsp; L-J y D: 13:00-23:30 &nbsp;&bull;&nbsp; V-S: 12:30-00:30 &nbsp;&bull;&nbsp; Menu estudiante 5,90 mar-jue 13:00-16:00 &nbsp;&bull;&nbsp; Las Fuentes &middot; El Actur &nbsp;&bull;&nbsp; #TacoJonudo &nbsp;&bull;&nbsp; Pide a domicilio en Uber Eats y Glovo &nbsp;&bull;
+              El Mundial llega a Tacos Street &nbsp;&bull;&nbsp; La Mundial: 4 tacos, 4 paises &nbsp;&bull;&nbsp; The Original French Tacos &nbsp;&bull;&nbsp; Made for Game-Changers &nbsp;&bull;&nbsp; Zaragoza &nbsp;&bull;&nbsp; L-J y D: 13:00-23:30 &nbsp;&bull;&nbsp; V-S: 12:30-00:30 &nbsp;&bull;&nbsp; Menu estudiante 5,90 mar-jue 13:00-16:00 &nbsp;&bull;&nbsp; Las Fuentes &middot; El Actur &nbsp;&bull;&nbsp; #TacoJonudo &nbsp;&bull;&nbsp; Pide a domicilio en Uber Eats y Glovo &nbsp;&bull;
             </div>
           ))}
         </div>
@@ -29,6 +30,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="hero hero-svg" id="inicio">
+        <MundialBunting />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/img/nuevas/tacos-web-banner.svg" alt="Tacos Street - The Original French Tacos Zaragoza" className="hero-banner-svg" />
         <div className="cta-row">
@@ -59,6 +61,67 @@ export default function Home() {
         <div className="strip-title">MADE FOR<br />GAME-CHANGERS</div>
         <p className="strip-sub">No es un taco mexicano. Es el taco frances autentico de los barrios de Lyon. La receta original. Las salsas de Francia. Aqui, en Zaragoza. #TacoJonudo</p>
       </div>
+
+      {/* Mundial 2026 */}
+      <section className="mundial-section" id="mundial">
+        <div className="mundial-head">
+          <div className="mundial-head-l">
+            <p className="sec-ey">Edicion limitada &middot; Mundial 2026</p>
+            <h2 className="sec-title">El Mundial llega a<br /><span className="mundial-y">Tacos Street</span></h2>
+            <p className="mundial-sub">Ven a vivir el Mundial con nosotros. Hemos sacado el <strong>Box La Mundial</strong>: 4 boxes de edicion limitada, uno por cada pais. Cada box trae su <strong>taco</strong>, sus <strong>patatas con topping</strong> y un <strong>complemento a elegir</strong>. Atrevete con los cuatro.</p>
+            <div className="mundial-cta-row">
+              <a href="#locales" className="btn-y">Ven a probarlos</a>
+              <div className="cta-delivery mundial-delivery">
+                <span className="cta-del-label">Pedir a domicilio</span>
+                <a href="https://www.ubereats.com/es/store/tacos-street-las-fuentes/Tky_8BkAW6qgCsPNzrHEHg" target="_blank" rel="noopener noreferrer" className="cta-del-icon" aria-label="Pedir en Uber Eats">
+                  <SiUbereats size={17} />
+                </a>
+                <a href="https://glovoapp.com/es/es/zaragoza/stores/tacos-street-zar" target="_blank" rel="noopener noreferrer" className="cta-del-icon" aria-label="Pedir en Glovo">
+                  <SiGlovo size={17} />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="mundial-head-r">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/img/mundial/box-campeon.webp" alt="La Mundial - El Box del Campeon de Tacos Street" loading="lazy" />
+          </div>
+        </div>
+        <div className="mundial-grid">
+          <div className="mundial-card">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/img/mundial/espana.webp" alt="Taco Espana - edicion Mundial Tacos Street" loading="lazy" />
+            <div className="mundial-card-body">
+              <div className="mundial-card-head"><span className="mundial-flag">🇪🇸</span><span className="mundial-country">Box Espana</span></div>
+              <p className="mundial-card-desc">Cordón Bleu, salsa brava, gratinado de mozzarella y topping de chorizo spicy. Patatas con huevos rotos y salsa trufada.</p>
+            </div>
+          </div>
+          <div className="mundial-card">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/img/mundial/mexico.webp" alt="Taco Mexico - edicion Mundial Tacos Street" loading="lazy" />
+            <div className="mundial-card-body">
+              <div className="mundial-card-head"><span className="mundial-flag">🇲🇽</span><span className="mundial-country">Box Mexico</span></div>
+              <p className="mundial-card-desc">Pollo tikka, salsa guacamole, gratinado de cheddar spicy y topping de Doritos. Patatas con salsa cheddar y jalapeños.</p>
+            </div>
+          </div>
+          <div className="mundial-card">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/img/mundial/usa.webp" alt="Taco USA - edicion Mundial Tacos Street" loading="lazy" />
+            <div className="mundial-card-body">
+              <div className="mundial-card-head"><span className="mundial-flag">🇺🇸</span><span className="mundial-country">Box USA</span></div>
+              <p className="mundial-card-desc">Salchicha Hot Dog, ketchup & mostaza, pepinillos, gratinado cheddar con cebolla crispy. Patatas con salsa ranchera y cebolla crispy.</p>
+            </div>
+          </div>
+          <div className="mundial-card">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/img/mundial/canada.webp" alt="Taco Canada - edicion Mundial Tacos Street" loading="lazy" />
+            <div className="mundial-card-body">
+              <div className="mundial-card-head"><span className="mundial-flag">🇨🇦</span><span className="mundial-country">Box Canada</span></div>
+              <p className="mundial-card-desc">Palitos de merluza, extra de gambas, extra de cheddar y salsa Fish to Fish. Patatas con salsa de queso y bacon de pavo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Menu */}
       <MenuSection />
@@ -154,7 +217,7 @@ export default function Home() {
         <div className="about-r">
           <div className="about-r-img">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/Emocionales/Emocional 4.jpg" alt="Local Tacos Street Actur" loading="lazy" />
+            <img src="/img/Emocionales/Emocional 4.webp" alt="Local Tacos Street Actur" loading="lazy" />
           </div>
           <div className="quote-card">
             <div className="quote-icon">&ldquo;</div>
@@ -170,10 +233,19 @@ export default function Home() {
       <section className="community-section" id="comunidad">
         <p className="sec-ey">Mas que un restaurante</p>
         <h2 className="sec-title">La comunidad</h2>
-        <MobileCarousel count={6} scrollClass="community-grid">
+        <MobileCarousel count={7} scrollClass="community-grid">
           <div className="comm-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/nuevas/lafusiondelacalle.jpg" alt="La Fusion de la Calle Makdurum x Tacos Street" loading="lazy" />
+            <img src="/img/mundial/mundial-porteria.webp" alt="El Mundial llega a Tacos Street" loading="lazy" />
+            <div className="comm-overlay">
+              <span className="comm-tag comm-tag-y">Mundial 2026</span>
+              <div className="comm-title">El Mundial llega a Tacos Street</div>
+              <p className="comm-desc">Box La Mundial: 4 boxes de edicion limitada, uno por cada pais. Ven a vivir cada partido con nosotros. <a href="#mundial" className="comm-link">Ver los boxes &rarr;</a></p>
+            </div>
+          </div>
+          <div className="comm-card">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/img/nuevas/lafusiondelacalle.webp" alt="La Fusion de la Calle Makdurum x Tacos Street" loading="lazy" />
             <div className="comm-overlay">
               <span className="comm-tag comm-tag-y">Sorteo &middot; 300&euro;</span>
               <div className="comm-title">Makdurum x Tacos Street</div>
@@ -182,7 +254,7 @@ export default function Home() {
           </div>
           <div className="comm-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/web/bikelife.jpg" alt="Evento bikelife con Tacos Street" loading="lazy" />
+            <img src="/img/web/bikelife.webp" alt="Evento bikelife con Tacos Street" loading="lazy" />
             <div className="comm-overlay">
               <span className="comm-tag comm-tag-y">Bikelife</span>
               <div className="comm-title">Bikelife x Tacos Street</div>
@@ -191,7 +263,7 @@ export default function Home() {
           </div>
           <div className="comm-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/web/evento-1v1.jpg" alt="Torneo 1v1 futbol Parque Bruil" loading="lazy" />
+            <img src="/img/web/evento-1v1.webp" alt="Torneo 1v1 futbol Parque Bruil" loading="lazy" />
             <div className="comm-overlay">
               <span className="comm-tag comm-tag-w">Evento</span>
               <div className="comm-title">Torneo 1v1 Futbol</div>
@@ -200,7 +272,7 @@ export default function Home() {
           </div>
           <div className="comm-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/web/fofana.jpg" alt="Fofana TV colaboracion" loading="lazy" />
+            <img src="/img/web/fofana.webp" alt="Fofana TV colaboracion" loading="lazy" />
             <div className="comm-overlay">
               <span className="comm-tag comm-tag-g">Collab</span>
               <div className="comm-title">Fofana TV x Tacos Street</div>
@@ -209,16 +281,7 @@ export default function Home() {
           </div>
           <div className="comm-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/web/sorteo.jpg" alt="Sorteo camisetas CAN" loading="lazy" />
-            <div className="comm-overlay">
-              <span className="comm-tag comm-tag-y">Sorteo</span>
-              <div className="comm-title">Sorteo Camisetas CAN</div>
-              <p className="comm-desc">Copa Africa de Naciones. Camisetas oficiales de Marruecos y Senegal en juego. Futbol y tacos, siempre juntos.</p>
-            </div>
-          </div>
-          <div className="comm-card">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/nuevas/524931565_17872907319399707_7374945463904138356_n.jpg" alt="Game Changer con caja" loading="lazy" />
+            <img src="/img/nuevas/524931565_17872907319399707_7374945463904138356_n.webp" alt="Game Changer con caja" loading="lazy" />
             <div className="comm-overlay">
               <span className="comm-tag comm-tag-y">Game Changer</span>
               <div className="comm-title">Made for Game-Changers</div>
@@ -239,7 +302,7 @@ export default function Home() {
         <div className="press-grid">
           <a className="press-card" href="https://www.heraldo.es/noticias/gastronomia/2025/09/28/nuevo-bar-tacos-franceses-actur-zaragoza-1857452.html" target="_blank" rel="noopener noreferrer">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <div className="press-logo" style={{ background: '#fff' }}><img src="/img/medios/heraldo.png" alt="Heraldo de Aragón" /></div>
+            <div className="press-logo" style={{ background: '#fff' }}><img src="/img/medios/heraldo.webp" alt="Heraldo de Aragón" /></div>
             <div className="press-source">Heraldo</div>
             <p className="press-quote">&ldquo;El restaurante de tacos franceses que está revolucionando Zaragoza con la receta auténtica directa de Francia.&rdquo;</p>
             <div className="press-date">Septiembre 2025</div>
@@ -247,7 +310,7 @@ export default function Home() {
           </a>
           <a className="press-card" href="https://www.elperiodicodearagon.com/zaragoza/2025/10/02/taco-street-inaugura-segundo-local-121942247.html" target="_blank" rel="noopener noreferrer">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <div className="press-logo"><img src="/img/medios/periodicodearagon.png" alt="Periódico de Aragón" /></div>
+            <div className="press-logo"><img src="/img/medios/periodicodearagon.webp" alt="Periódico de Aragón" /></div>
             <div className="press-source">Periódico de Aragón</div>
             <p className="press-quote">&ldquo;El fenómeno gastronómico que conquistó Las Fuentes ya tiene su segundo local en Zaragoza.&rdquo;</p>
             <div className="press-date">Octubre 2025</div>
@@ -255,7 +318,7 @@ export default function Home() {
           </a>
           <a className="press-card" href="https://www.hoyaragon.es/articulo/gastrolike/tacos-street-zaragoza/20250922095954109681.html" target="_blank" rel="noopener noreferrer">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <div className="press-logo"><img src="/img/medios/hoyaragon.png" alt="Hoy Aragón" /></div>
+            <div className="press-logo"><img src="/img/medios/hoyaragon.webp" alt="Hoy Aragón" /></div>
             <div className="press-source">Hoy Aragón</div>
             <p className="press-quote">&ldquo;Tacos Street conquistó Zaragoza con el taco francés más grande de España y ahora llega al Actur.&rdquo;</p>
             <div className="press-date">Septiembre 2025</div>
@@ -275,7 +338,7 @@ export default function Home() {
       {/* Reviews */}
       <section className="reviews-section">
         <p className="sec-ey">Lo que dice Zaragoza</p>
-        <h2 className="sec-title">4.6 <span style={{ color: 'var(--y)' }}>&#9733;</span><br />Google Reviews</h2>
+        <h2 className="sec-title">4.7 <span style={{ color: 'var(--y)' }}>&#9733;</span><br />Google Reviews</h2>
         <MobileCarousel count={6} scrollClass="reviews-grid">
           <div className="rv"><div className="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p className="rv-text">&ldquo;El taco mas grande que he visto en mi vida. El XXL es una locura, con uno tienes de sobra. La salsa de queso casera esta increible. Volvere seguro.&rdquo;</p><div className="rv-author">&mdash; Javier M. &middot; Google</div></div>
           <div className="rv"><div className="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p className="rv-text">&ldquo;El personal super amable, te explican todo si es tu primera vez. Pedi el Django y me conquisto. La cantidad de combinaciones es impresionante. Mi nuevo favorito.&rdquo;</p><div className="rv-author">&mdash; Laura P. &middot; Google</div></div>
@@ -299,7 +362,7 @@ export default function Home() {
         <div className="ig-grid">
           {igPhotos.map(p => (
             <a key={p} href="https://www.instagram.com/tacosstreet.es/" target="_blank" rel="noopener noreferrer">
-              <img src={`/img/${p}.jpg`} alt="Tacos Street Instagram" loading="lazy" />
+              <img src={`/img/${p}.webp`} alt="Tacos Street Instagram" loading="lazy" />
             </a>
           ))}
         </div>
@@ -316,7 +379,7 @@ export default function Home() {
         <div className="loc-grid">
           <div className="loc-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="loc-img" src="/img/nuevas/lasfuentes.jpg" alt="Interior de Tacos Street Las Fuentes" loading="lazy" />
+            <img className="loc-img" src="/img/nuevas/lasfuentes.webp" alt="Interior de Tacos Street Las Fuentes" loading="lazy" />
             <div className="loc-num">Local 01 &middot; El original</div>
             <div className="loc-name">Las Fuentes</div>
             <p className="loc-addr">C/ Minas, 19 &middot; Barrio de Las Fuentes</p>
@@ -341,7 +404,7 @@ export default function Home() {
           </div>
           <div className="loc-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="loc-img" src="/img/Emocionales/Emocional 2.jpg" alt="Exterior de Tacos Street Actur" loading="lazy" />
+            <img className="loc-img" src="/img/Emocionales/Emocional 2.webp" alt="Exterior de Tacos Street Actur" loading="lazy" />
             <div className="loc-num">Local 02 &middot; El Actur</div>
             <div className="loc-name">El Actur</div>
             <p className="loc-addr">C/ Gabriel Celaya, 14 &middot; 50018 Zaragoza</p>
